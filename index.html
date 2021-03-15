@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Sample Screen:</h1>
+<input type="text" id="ip" value="">
+<input type="button" value="Add" id="bt1" onclick="add()">
+<input type="button" value="Display" id="bt2" onclick="dp()">
+<p id="show"></p>
+</body>
+</html>
+<script>
+    let array=[]
+    function add() {
+       array.push(document.getElementById('ip').value);
+       document.getElementById('ip').value="";
+       console.log(array)
+    }
+    function dp() {
+        for (i=0;i<array.length;i++){
+            document.getElementById('show').innerHTML+="Element "+i+" = "+array[i]+"<br>"
+        }
+        document.getElementById('show').innerHTML+="--------------------------"+"<br>"
+    }
+</script>
